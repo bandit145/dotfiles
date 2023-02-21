@@ -1,3 +1,6 @@
 alias dockerkill="docker ps -a | awk 'NR>1{print $1}' | xargs docker rm -f"
 alias hgrep='history | grep'
 alias bssh='ssh $USER@$JUMP_HOSTS[$(shuf -i 1-7  --random-source=/dev/urandom -n 1)]'
+alias fedora_work="docker run --privileged  -it -v /$HOME/container/:/container -v $HOME/git/:/git  fedora:36 /bin/bash"
+alias rocky_work="docker run --privileged  -it -v /$HOME/container/:/container -v $HOME/git/:/git  rockylinux:9-minimal /bin/bash"
+alias ansible_venv="source ~/ansible_venv/bin/activate"
